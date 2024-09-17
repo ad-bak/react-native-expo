@@ -1,0 +1,37 @@
+# OSX
+.DS_Store
+
+# Xcode-specific files and folders
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+.xcode.env.local
+.xcode.env
+
+# Bundle artifacts
+*.jsbundle
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# iOS-specific files and folders
+ios/build/
+ios/Pods/
+ios/DerivedData/
+ios/.DS_Store
+ios/*.xcworkspace
+ios/*.xcodeproj/project.xcworkspace
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/xcshareddata/xcschemes/
+ios/*.xcodeproj/project.xcworkspace/xcuserdata/
