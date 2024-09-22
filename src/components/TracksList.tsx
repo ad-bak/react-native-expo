@@ -2,27 +2,30 @@ import { FlatList, FlatListProps, View } from 'react-native'
 import { TracksListItem } from './TrackListItem'
 import library from '@/assets/data/library.json'
 import { utilsStyles } from '@/styles'
+import { Track } from 'react-native-track-player'
 
-export type TrackListProps = Partial<FlatListProps<unknown>>
+export type TrackListProps = Partial<FlatListProps<Track>> & {
+	tracks: Track[]
+}
 
 const itemDivider = () => (
 	<View style={{ ...utilsStyles.itemSeparator, marginVertical: 9, marginLeft: 60 }} />
 )
 
-export const TrackList = ({ ...flatlistProps }: TrackListProps = {}) => {
+export const TrackList = ({ tracks, ...flatlistProps }: TrackListProps) => {
+	const handleTrackSelect = (track: Track) => {
+		console.log('Selected track:', track)
+	}
 	return (
 		<FlatList
-			data={library}
+			data={tracks}
+			contentContainerStyle={{ padding: 10, paddingBottom: 128 }}
 			ItemSeparatorComponent={itemDivider}
-			keyExtractor={(item) => item.title}
+			ListFooterComponent={itemDivider}
 			renderItem={({ item: track }) => (
-				<TracksListItem
-					track={{
-						...track,
-						image: track.artwork,
-					}}
-				/>
+				<TracksListItem track={track} onTrackSelect={handleTrackSelect} />
 			)}
+			{...flatlistProps}
 		/>
 	)
 }

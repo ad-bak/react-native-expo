@@ -15,7 +15,10 @@
 		"ios": {
 			"supportsTablet": true,
 			"bundleIdentifier": "com.anonymous.music-player",
-			"minimumOsVersion": "17.0"
+			"minimumOsVersion": "17.0",
+			"infoPlist": {
+				"UIBackgroundModes": ["audio"]
+			}
 		},
 		"android": {
 			"adaptiveIcon": {
