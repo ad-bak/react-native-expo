@@ -39,14 +39,4 @@ yarn-error.*
 
 expo-env.d.ts
 # @end expo-cli
-
-ios/Pods/
-ios/Podfile.lock
-ios/build/
-ios/DerivedData/
-ios/.DS_Store
-ios/*.xcworkspace
-ios/*.xcodeproj/project.xcworkspace
-ios/*.xcodeproj/xcuserdata/
-ios/*.xcodeproj/xcshareddata/xcschemes/
-ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+ios/
